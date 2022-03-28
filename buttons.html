@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"> 
+<title> При нажатии на кнопку цвет меняется случайным образом </title>
+</head>
+<body>
+<button id = "changeColor">Click here to change my color</button>
+<script>
+var changeButton = document.getElementById('changeColor');
+
+function random(number){
+  return Math.floor(Math.random()*number);
+}
+
+function switchColor(){
+    var randomColor = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+    changeButton.style.background = randomColor
+    console.log(randomColor);
+}
+changeButton.addEventListener('click', switchColor);
+</script>
+</body>
+</html>
